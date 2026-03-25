@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import Button from "../shared/Button";
 import heroImage from "../../assets/images/hero/museum-hero.jpg";
 
 function HeroSection() {
@@ -6,7 +6,8 @@ function HeroSection() {
     <section
       className="section"
       style={{
-        background: "linear-gradient(rgba(74,48,54,0.75), rgba(137,7,38,0.75)), url(" + heroImage + ") center/cover no-repeat",
+        background:
+          `linear-gradient(rgba(74,48,54,0.75), rgba(137,7,38,0.75)), url(${heroImage}) center/cover no-repeat`,
         color: "white",
         minHeight: "88vh",
         display: "flex",
@@ -25,31 +26,13 @@ function HeroSection() {
           </p>
 
           <div style={{ display: "flex", gap: "16px", flexWrap: "wrap" }}>
-            <Link
-              to="/about"
-              style={{
-                background: "#890726",
-                color: "white",
-                padding: "14px 24px",
-                borderRadius: "10px",
-                fontWeight: "600",
-              }}
-            >
+            <Button to="/about" variant="primary">
               Muzey haqida
-            </Link>
+            </Button>
 
-            <Link
-              to="/gallery"
-              style={{
-                background: "#EFEFEF",
-                color: "#4A3036",
-                padding: "14px 24px",
-                borderRadius: "10px",
-                fontWeight: "600",
-              }}
-            >
+            <Button to="/gallery" variant="light">
               Galereyani ko‘rish
-            </Link>
+            </Button>
           </div>
         </div>
       </div>

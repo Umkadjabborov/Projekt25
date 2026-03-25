@@ -1,19 +1,20 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "./pages/Home";
-import About from "./pages/About";
-import SaidAhmad from "./pages/SaidAhmad";
-import SaidaZunnunova from "./pages/SaidaZunnunova";
-import Gallery from "./pages/Gallery";
-import Timeline from "./pages/Timeline";
-import VirtualTour from "./pages/VirtualTour";
-import Contact from "./pages/Contact";
 import Navbar from "./components/layout/Navbar";
-import Footer from "./components/layout/Footer";
+import Footer from "./components/layout/Fotter";
+import Home from "./components/pages/Home";
+import About from "./components/pages/About";
+import SaidAhmad from "./components/pages/SaidAhmad";
+import SaidaZunnunova from "./components/pages/SaidaZunnunova";
+import Gallery from "./components/pages/Gallery";
+import Timeline from "./components/pages/Timeline";
+import VirtualTour from "./components/pages/VirtualTour";
+import Contact from "./components/pages/Contact";
 
 function App() {
   return (
     <BrowserRouter>
       <Navbar />
+
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
@@ -24,6 +25,7 @@ function App() {
         <Route path="/virtual-tour" element={<VirtualTour />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
+
       <Footer />
     </BrowserRouter>
   );
